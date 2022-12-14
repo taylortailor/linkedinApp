@@ -16,7 +16,8 @@ ss=pd.DataFrame({
     "education":np.where(s["educ2"] > 8, np.nan, s["educ2"]),
     "parent":np.where(s["par"] == 1, 1, 0),
     "marital":np.where(s["marital"] == 1, 1, 0),
-    "female":np.where(s["gender"] == 2, 1, 0),
+    "female": np.where(s['gender'] == 1, 0,
+                       np.where(s['gender'] == 2, 1, np.nan)),
     "age":np.where(s["age"] > 98, np.nan, s["age"])
 })
 ss=ss.dropna()
