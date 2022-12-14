@@ -46,13 +46,13 @@ st.markdown("# LinkedIn User Prediction")
 inc_display = ("Less than $10k","$10k - 20k","$20k - 30k", "$30k - 40k","$40k - 50k",
     "$50k - 75k","$75k - 100k", "$100k - $150k", "Over $150k")
 options = list(range(len(inc_display)))
-inc_value = 1+st.selectbox("gender", options, format_func=lambda x: inc_display[x])
+inc_value = 1+st.selectbox("What is your household income?", options, format_func=lambda x: inc_display[x])
 #education selection box 
 edu_display = ("Less than high school","High school incomplete","High school graduate",
     "Some college","Two-year associate degree","Four-year college or university degree","Some postgraduate schooling",
     "Postgraduate or professional degree")
 options = list(range(len(edu_display)))
-edu_value = 1+st.selectbox("gender", options, format_func=lambda x: edu_display[x])
+edu_value = 1+st.selectbox("What is your highest level of education?", options, format_func=lambda x: edu_display[x])
 #radio buttons for parent, marital status, gender 
 parentradio = st.radio("Are you a parent?", ("Yes", "No"))
 if parentradio == "Yes":
